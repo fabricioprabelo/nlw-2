@@ -1,15 +1,15 @@
 {
     "name": "server",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "src/server.ts",
     "license": "MIT",
     "scripts": {
         "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
-        "knex:migrate:make": "./node_modules/.bin/knex migrate:make --knexfile knexfile.ts -x ts",
-        "knex:migrate:latest": "./node_modules/.bin/knex --knexfile knexfile.ts migrate:latest",
-        "knex:migrate:rollback": "./node_modules/.bin/knex --knexfile knexfile.ts migrate:rollback",
-        "knex:seed:make": "./node_modules/.bin/knex seed:make --knexfile knexfile.ts -x ts",
-        "knex:seed:run": "./node_modules/.bin/knex --knexfile knexfile.ts seed:run"
+        "knex:migrate:make": "knex migrate:make --knexfile knexfile.ts -x ts",
+        "knex:migrate:latest": "knex --knexfile knexfile.ts migrate:latest",
+        "knex:migrate:rollback": "knex --knexfile knexfile.ts migrate:rollback",
+        "knex:seed:make": "knex seed:make --knexfile knexfile.ts -x ts",
+        "knex:seed:run": "knex --knexfile knexfile.ts seed:run"
     },
     "dependencies": {
         "cors": "^2.8.5",
